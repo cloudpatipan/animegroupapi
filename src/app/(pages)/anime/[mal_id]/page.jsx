@@ -15,10 +15,10 @@ export default function AnimeDetail() {
     console.log(data)
 
     useEffect(() => {
-        fetchData();
+        fetchDataDetail();
     }, [mal_id]);
 
-    const fetchData = async () => {
+    const fetchDataDetail = async () => {
         try {
             const response = await fetch(`https://api.jikan.moe/v4/anime/${mal_id}/full`);
             const data = await response.json();
